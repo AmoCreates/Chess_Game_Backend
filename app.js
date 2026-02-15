@@ -10,7 +10,7 @@ const chess = new Chess();
 import { Server } from "socket.io";  
 const io = new Server(server, {
     cors: {
-    origin: "http://localhost:5173",
+    origin: "https://chess-game-backend-sigma.vercel.app/",
     methods: ["GET", "POST"]
   }
 });
