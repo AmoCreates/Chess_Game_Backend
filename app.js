@@ -17,7 +17,7 @@ const io = new Server(server, {
 
 
 import 'dotenv/config';
-const port = 3000;
+const PORT = process.env.PORT || 3000;
 
 let players = {}
 let currentPlayer = 'W'
@@ -78,6 +78,4 @@ io.on('connection', (socket) => {
     })
 })
 
-server.listen(process.env.PORT || port, () => {
-    console.log(`server is listening`)
-})
+server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
